@@ -20,6 +20,9 @@ html, body {
   height: 100%;
   margin: 0 auto -60px;
 }
+#wrap li{
+  margin-top:  10px;
+}
 .container-narrow {
   margin: 0 auto;
   max-width: 700px;
@@ -45,4 +48,15 @@ html, body {
 }
 #footer span {
   margin: 10px 0;
+}
+.title-label {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  left: 6px;
+}
+h1.muted {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 34px;
 }

@@ -13,16 +13,18 @@
       <ul class="nav nav-pills pull-right">
        	<% if current_user %>
        	<li><%= link_to current_user.email %></li>	
-          <li><%= link_to '登出', destroy_user_session_path, :method => :delete %></li>
+           <li><%= link_to '登出', destroy_user_session_path, :method => :delete %></li>
        	<li><%= link_to '修改密碼', edit_registration_path(:user) %></li>
   	<% else %>
   		<li><%= link_to '註冊', new_registration_path(:user) %></li>
    		<li><%= link_to '登入', new_session_path(:user)%></li>
    	<% end %>
-        	
-        
       </ul>
-      <a href="/" title="回首頁"><h1 class="muted">Loser Forum</h1></a>
+
+      <h1 class = "muted"><%= link_to 'Loser Forum', :root, :title =>'回首頁' %></h1>
+      <span class = "title-label label label-primary">Hey</span>
+      <span class = "title-label label label-warning">Yo</span>
+      <span class = "title-label label label-danger">Ya</span>
     </div>
     <hr>
 

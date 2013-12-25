@@ -12,7 +12,7 @@
     <div class="masthead">
       <ul class="nav nav-pills pull-right">
        	<% if current_user %>
-       	<li><%= link_to current_user.email %></li>	
+       	<li><%= link_to current_user.name %></li>	
            <li><%= link_to '登出', destroy_user_session_path, :method => :delete %></li>
        	<li><%= link_to '修改密碼', edit_registration_path(:user) %></li>
   	<% else %>
@@ -35,11 +35,11 @@
 <div id="footer">
     <div class="container-narrow">
     <ul class="footer-links">
-      <li><%= link_to '使用說明', { :controller=> 'posts', :action => 'help' },:title => '看說明'  %></li>
+      <li><%= link_to '使用說明', posts_help_path ,:title => '看說明'  %></li>
       <li class="muted">·</li>
-      <li><%= link_to '留言', { :controller=> 'posts', :action => 'board' },:title => '留一點東西' %></li>
+      <li><%= link_to '留言', posts_board_path,:title => '留一點東西' %></li>
       <li class="muted">·</li>
-      <li><%= link_to '測試頁面', { :controller=> 'posts', :action => 'test' },:title => '不知道要放啥' %></li>
+      <li><%= link_to '測試頁面', posts_test_path,:title => '不知道要放啥' %></li>
     </ul>
     <span class="pull-right">© 2014 Bob &nbsp;-&nbsp;Built with <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a> & copy from <a href="http://library.hunw.com/" target="_blank">hunw</a></span>
     </div>

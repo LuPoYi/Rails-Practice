@@ -8,7 +8,7 @@
 		<% @posts.each do |p| %>
 		<tr>
 			<td> <%= link_to p.title, post_path(p) %></td>
-			<td> <%= p.user_id %></td>
+			<td> <%= p.find_user_name(p.user_id) %></td>
 			<td>
 
 				<% if current_user && p.editable_by?(current_user) %>

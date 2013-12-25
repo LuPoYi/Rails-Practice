@@ -9,4 +9,11 @@ class Post < ActiveRecord::Base
   		user && user == owner
   		# not understand clearly
   	end
+
+  	def find_user_name(user_id)
+  		User.find(user_id).name
+  	end
+
+
+
 end

@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
 	#belongs_to :user
 	belongs_to :owner, :class_name => "User", :foreign_key => :user_id
-
+	has_many :comments
 
 
 
@@ -14,6 +14,10 @@ class Post < ActiveRecord::Base
   		User.find(user_id).name
   	end
 
+      def get_comment_count(post_id)
+            Comment.where(:post_id => post_id).count
+
+      end
 
 
 end

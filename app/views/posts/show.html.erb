@@ -1,2 +1,12 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
+<br><br>---------- 留言區 ----------
+<table>
+	<% @comments.each do |c|  %>
+	<tr>
+		<td><%= c.content %> </td>
+		<td>by <%= c.find_user_name(c.user_id) %> </td>
+	 </tr>
+	<% end %>
+</table>
+<%= link_to '我也想留言', new_post_comment_path(@post) %>
